@@ -1,0 +1,6 @@
+ID,Description (hypothesis),Cause,Impact,L,S,Exposure,Owner,First Action,Trigger,Next Review
+RISK-01,Offline sensor data lost,Network failure or probe offline,Dashboard shows stale data incorrectly,3,5,15,Salma,Add offline handling & retries,Probe offline >60s,Next sprint
+RISK-02,Duplicate alerts at night,Door opens briefly multiple times,Kiosk owner receives multiple alerts,2,4,8,Talha,Add spike ignore logic,Repeated short spikes,Next sprint
+RISK-03,Unauthorized alert access,Missing MFA or improper auth,Security breach,2,5,10,Mercy,Implement MFA & logging,Failed login attempts >5,Next sprint
+RISK-04,Dashboard slow load,High number of freezers or data,User frustration,3,4,12,Salma,Optimize DB queries & cache,Load time >300ms,Next sprint
+RISK-05,Threshold misapplied,Device offline during threshold update,Alerts use wrong threshold,2,5,10,Mercy,Apply latest threshold on reconnect,Threshold update while offline,Next sprint

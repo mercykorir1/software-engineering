@@ -1,0 +1,17 @@
+ID,Epic,Story,Type,MoSCoW,Estimate,ACs (Gherkin inline),Linked NFRs,Planned Test IDs,Notes
+EP-ALERT-01,Offline Sensors,As a kiosk owner, I want the dashboard to show offline sensors as 'stale' so that I know which freezers are not reporting.,Feature,Must,5,"AC1: Given a probe is online, when dashboard loads, then probe shows latest temperature and status.
+AC2: Given a probe is offline for 60 seconds, when dashboard loads, then probe shows 'stale/offline.'
+AC3: Given a probe goes offline and comes back online, when it reconnects, then dashboard updates latest temperature and timestamp.",NFR-PERF-01,T-ALR-001;T-ALR-002,Offline sensor handling
+EP-ALERT-02,Threshold Management,As a kiosk owner, I want threshold changes to be logged and displayed so that I know which value is active.,Feature,Must,5,"AC1: Given a threshold is set, when the next breach occurs, then alert uses current threshold.
+AC2: Given the device is offline during a threshold change, when it reconnects, then latest threshold is applied.
+AC3: Given multiple thresholds are changed quickly, when a breach occurs, then alert uses most recent threshold and logs user/time.",NFR-SEC-01,T-ALR-005;T-ALR-006,Threshold tracking
+EP-ALERT-03,False Alarms,As a kiosk owner, I want to ignore brief temperature spikes so that I don't get duplicate alerts at night.,Feature,Should,3,"AC1: Given temperature exceeds threshold >2 min, then exactly one alert is sent.
+AC2: Given a breach was already alerted, then no additional alert is sent until condition clears.
+AC3: Given door opens briefly at night (<2 min), then no alert is sent.",NFR-PERF-01,T-ALR-007;T-ALR-008,False alarm handling
+EP-ALERT-04,Real-time Alerts,As a kiosk owner, I want to receive alerts via preferred channel (SMS/email) so that I get notified efficiently.,Feature,Must,5,"AC1: Given SMS selected, when a breach occurs, then SMS alert sent.
+AC2: Given email selected, when a breach occurs, then email alert sent.
+AC3: Given both selected, both SMS/email sent once.",NFR-PERF-01;NFR-SEC-02,T-ALR-003;T-ALR-004,Alert delivery
+EP-ALERT-05,Historical Alerts,As a kiosk owner, I want to view historical alerts in dashboard so I can review past incidents and thresholds.,Feature,Should,4,"AC1: Given alerts exist, when owner opens dashboard, then all past alerts listed with timestamp and threshold.
+AC2: Given device offline during alert, when dashboard loads, then alert shows 'offline' with last known timestamp.",NFR-PERF-01,T-ALR-009,Historical alert view
+EP-ALERT-06,Dashboard Usability,As a kiosk owner, I want to see freezer status at a glance so that I can quickly check all freezers.,Feature,Must,4,"AC1: Given multiple freezers, when dashboard loads, then each shows temperature, status, and alert count.
+AC2: Given a freezer is offline, then it appears in top-level view marked 'stale/offline'.",NFR-UX-01,T-ALR-010,Dashboard overview

@@ -1,0 +1,7 @@
+StoryID,Epic,Linked NFRs,AC IDs,Test IDs,Evidence Link
+FR-ALERT-01,Offline Sensors,NFR-PERF-02,AC1;AC2;AC3,T-ALR-001;T-ALR-002,evidence/EV-01_offline_status.pdf
+FR-ALERT-04,Real-time Alerts,NFR-PERF-01;NFR-SEC-02,AC1;AC2;AC3,T-ALR-003;T-ALR-004,evidence/EV-02_alert_delivery.pdf
+FR-ALERT-02,Threshold Management,NFR-SEC-01,AC1;AC2;AC3,T-ALR-005;T-ALR-006,evidence/EV-03_threshold_log.pdf
+FR-ALERT-03,False Alarms,NFR-PERF-01,AC1;AC2;AC3,T-ALR-007;T-ALR-008,evidence/EV-04_false_alarm.pdf
+FR-ALERT-05,Historical Alerts,NFR-PERF-01,AC1;AC2,T-ALR-009,evidence/EV-05_historical_alerts.pdf
+FR-ALERT-06,Dashboard Usability,NFR-UX-01,AC1;AC2,T-ALR-010,evidence/EV-06_dashboard_view.pdf
