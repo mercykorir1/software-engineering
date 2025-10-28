@@ -1,0 +1,4 @@
+# Route files to specific reviewers
+/docs/**        @mercykorir1
+/src/auth/**    @FahimOrko @talhaamjad98
+*.md            @mercykorir1
