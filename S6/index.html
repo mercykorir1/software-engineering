@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>S6 Files</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin: 8px 0;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #markdown-container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 20px;
+        max-width: 800px;
+        background: #f9f9f9;
+      }
+      .margin-top {
+        margin-top: 40px;
+      }
+
+      .button {
+        border: 1px solid #ccc;
+        padding: 15px;
+        max-width: fit-content;
+        background: #000;
+        color: #ccc;
+        border-radius: 4%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>S6 Folder Files</h1>
+    <ul>
+      <li><a href="AI_Use_Note.md" class="md-link">AI_Use_Note.md</a></li>
+      <li><a href="Backlog.csv" target="_blank">Backlog.csv</a></li>
+      <li><a href="Comms_Strategy.md" class="md-link">Comms_Strategy.md</a></li>
+      <li>evidence/ (folder)</li>
+      <li>
+        <a href="MoSCoW_Summary.pdf" target="_blank">MoSCoW_Summary.pdf</a>
+      </li>
+      <li><a href="NFRs.csv" target="_blank">NFRs.csv</a></li>
+      <li><a href="RiskRegister.csv" target="_blank">RiskRegister.csv</a></li>
+      <li>
+        <a href="Stakeholder_Map.pdf" target="_blank">Stakeholder_Map.pdf</a>
+      </li>
+      <li><a href="Traceability.csv" target="_blank">Traceability.csv</a></li>
+      <li>
+        <a href="Vision_OnePager.pdf" target="_blank">Vision_OnePager.pdf</a>
+      </li>
+    </ul>
+
+    <div id="markdown-container" style="display: none"></div>
+    <p class="margin-top">
+      <a href="../index.html" class="button">Back to Home</a>
+    </p>
+
+    <!-- Include Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const links = document.querySelectorAll(".md-link");
+      const container = document.getElementById("markdown-container");
+
+      links.forEach((link) => {
+        link.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const url = link.getAttribute("href");
+
+          // Fetch the markdown file
+          const response = await fetch(url);
+          const text = await response.text();
+
+          // Convert markdown to HTML
+          container.innerHTML = marked.parse(text);
+          container.style.display = "block";
+          container.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
