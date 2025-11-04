@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="247px" preserveAspectRatio="none" style="width:727px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 727 247" width="727px" zoomAndPan="magnify"><defs/><g><!--MD5=[7d5906afa47bf8b0a6fb7c6c76dda32c]
+cluster Our System--><g id="cluster_Our System"><rect fill="none" height="97" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="633" x="7" y="144.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92" x="277.5" y="159.4951">Our System</text></g><!--MD5=[cbb8739ea188949496da5cf57df98c74]
+entity API Gateway--><g id="elem_API Gateway"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124" x="500" y="179.5"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="604" y="184.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="602" y="186.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="602" y="190.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="515" y="212.4951">API Gateway</text></g><!--MD5=[a3d81bc03f40465f4e98c44b00c76242]
+entity Alert Service--><g id="elem_Alert Service"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="339.5" y="179.5"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="444.5" y="184.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="442.5" y="186.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="442.5" y="190.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="354.5" y="212.4951">Alert Service</text></g><!--MD5=[f4afbf3e1e9cb6a28462572dcf72ea90]
+entity Data Store--><g id="elem_Data Store"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113" x="191.5" y="179.5"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="284.5" y="184.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="282.5" y="186.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="282.5" y="190.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="206.5" y="212.4951">Data Store</text></g><!--MD5=[204aaf418d4f32488be5b88b099342eb]
+entity Dashboard UI--><g id="elem_Dashboard UI"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133" x="23.5" y="179.5"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="136.5" y="184.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="134.5" y="186.5"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="134.5" y="190.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="38.5" y="212.4951">Dashboard UI</text></g><!--MD5=[443a25782ed9d9100e54cbf2ea68ee04]
+entity Owner--><g id="elem_Owner"><ellipse cx="273" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M273,22 L273,49 M260,30 L286,30 M273,49 L260,64 M273,49 L286,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="230" y="78.4951">Kiosk Owner</text></g><!--MD5=[65553002ead796e1c38407380a9c2ffe]
+entity Probe--><g id="elem_Probe"><ellipse cx="562" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M562,22 L562,49 M549,30 L575,30 M562,49 L549,64 M562,49 L575,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="516" y="78.4951">Probe Device</text></g><!--MD5=[e072d15087d09e087a926750d5135a6a]
+link Owner to Dashboard UI--><g id="link_Owner_Dashboard UI"><path d="M229.63,81.71 C195.75,110.78 149.55,150.41 119.74,175.98 " fill="none" id="Owner-to-Dashboard UI" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="115.83,179.34,125.2674,176.5228,119.6273,176.0872,120.0629,170.4472,115.83,179.34" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="193" y="124.5669">HTTPS</text></g><!--MD5=[a178a108139a3c13d932bec8d5c78033]
+link Probe to API Gateway--><g id="link_Probe_API Gateway"><path d="M562,81.71 C562,109.98 562,148.25 562,173.85 " fill="none" id="Probe-to-API Gateway" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="562,179.11,566,170.11,562,174.11,558,170.11,562,179.11" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="563" y="124.5669">MQTT/HTTPS (telemetry)</text></g><!--MD5=[7b165e506dd22f9bd60d552ff1203748]
+link Alert Service to Owner--><g id="link_Alert Service_Owner"><path d="M383.61,179.11 C363.66,154.83 331.38,115.55 306.83,85.67 " fill="none" id="Alert Service-to-Owner" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="303.57,81.71,306.179,91.207,306.7385,85.5779,312.3676,86.1374,303.57,81.71" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="342" y="124.5669">SMS/Email (via Gateway)</text></g><!--MD5=[9805504153090dd760f65ace21f7ee4d]
+@startuml
+actor "Kiosk Owner" as Owner
+actor "Probe Device" as Probe
+rectangle "Our System" {
+  [API Gateway]
+  [Alert Service]
+  [Data Store]
+  [Dashboard UI]
+}
+Owner - -> [Dashboard UI] : HTTPS
+Probe - -> [API Gateway] : MQTT/HTTPS (telemetry)
+[Alert Service] - -> Owner : SMS/Email (via Gateway)
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

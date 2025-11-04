@@ -1,0 +1,15 @@
+    @startuml
+package "Alert Service" {
+  [Threshold Manager]
+  [Alert Dispatcher]
+}
+
+package "Dashboard UI" {
+  [Dashboard Page]
+  [Alert History Page]
+}
+
+[API Gateway] --> [Alert Service]
+[API Gateway] --> [Data Store]
+[Dashboard UI] --> [API Gateway]
+@enduml
