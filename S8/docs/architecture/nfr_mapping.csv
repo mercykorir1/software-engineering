@@ -1,0 +1,6 @@
+ID,Category,Measurable Statement,Rationale,Verification Approach,Test Plan ID,Owner
+NFR-PERF-01,Performance,P95 latency < 300 ms at 200 RPS for 10 min; error rate < 0.5%,Ensure dashboard and alerts are responsive,T-PERF-01; T-PERF-02,Unit + integration tests,Salma
+NFR-SEC-01,Security,Admin auth requires MFA (AAL2+); throttle ≥5 failed logins/min; 90-day admin audit,Protect sensitive threshold and alert configuration,T-SEC-01; T-SEC-02,Security tests & audit logs,Mercy
+NFR-UX-01,Usability,TSR ≥ 85% for viewing freezer dashboard ≤ 20s (n=5 users),Ensure users can quickly understand freezer status,T-UX-01,User testing with target users,Talha
+NFR-SEC-02,Alert Security,Only authorized owners receive alerts,Prevent unauthorized access,T-SEC-03,Integration test on alert service,Mercy
+NFR-PERF-02,Reliability,Offline status reflected within 60s of probe missing update,Ensure real-time awareness,T-PERF-03,Integration test of offline handler,Salma
