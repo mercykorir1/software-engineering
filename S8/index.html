@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>S8 Files</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      li {
+        margin: 8px 0;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #markdown-container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 20px;
+        max-width: 800px;
+        background: #f9f9f9;
+      }
+      .margin-top {
+        margin-top: 40px;
+      }
+      .button {
+        border: 1px solid #ccc;
+        padding: 15px;
+        max-width: fit-content;
+        background: #000;
+        color: #ccc;
+        border-radius: 4%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>S8 — Design Principles & Architecture</h1>
+    <ul>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/docs/architecture/context.svg"
+          target="_blank"
+        >
+          Context Diagram
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/docs/architecture/components.svg"
+          target="_blank"
+        >
+          Component Diagram
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/docs/architecture/openapi.yaml"
+          target="_blank"
+        >
+          Interfaces (OpenAPI Spec)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/docs/architecture/nfr_mapping.csv"
+          target="_blank"
+        >
+          NFR Mapping
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://raw.githubusercontent.com/mercykorir1/software-engineering/feature/S8-architecture/S8/docs/architecture/tradeoffs.md"
+          class="md-link"
+        >
+          Tradeoffs
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/tests/T-PERF-01.js"
+          target="_blank"
+        >
+          Performance Test Script
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/feature/S8-architecture/S8/evidence/EV-perf-alerts.txt"
+          target="_blank"
+        >
+          Evidence (Perf Alerts)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://raw.githubusercontent.com/mercykorir1/software-engineering/feature/S8-architecture/S8/review_notes/TEAM_01.md"
+          class="md-link"
+        >
+          Review Notes (TEAM_01)
+        </a>
+      </li>
+    </ul>
+
+    <div id="markdown-container" style="display: none"></div>
+
+    <p class="margin-top">
+      <a href="../index.html" class="button">Back to Home</a>
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const links = document.querySelectorAll(".md-link");
+      const container = document.getElementById("markdown-container");
+
+      links.forEach((link) => {
+        link.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const url = link.getAttribute("href");
+          const response = await fetch(url);
+          const text = await response.text();
+          container.innerHTML = marked.parse(text);
+          container.style.display = "block";
+          container.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>

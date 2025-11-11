@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: EduSphere Kiosk API
+  version: "1.0.0"
+paths:
+  /v1/alerts:
+    get:
+      summary: List alerts (cursor pagination)
+      parameters:
+        - in: query
+          name: cursor
+          schema: { type: string }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 25, maximum: 100 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertList'
+      x-slo:
+        p95_ms: 300
+  /v1/alerts:
+    post:
+      summary: Create alert (idempotent via Idempotency-Key)
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlertCreate'
+      responses:
+        '201':
+          description: Created
+components:
+  schemas:
+    Error:
+      type: object
+      required: [code,message,traceId]
+      properties:
+        code: { type: string }
+        message: { type: string }
+        details: { type: object, additionalProperties: true }
+        traceId: { type: string }
+    AlertList: { type: object }
+    AlertCreate: { type: object }

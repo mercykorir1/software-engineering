@@ -1,0 +1,15 @@
+@startuml
+actor "Kiosk Owner" as Owner
+actor "Probe Device" as Probe
+rectangle "Our System" {
+  [API Gateway]
+  [Alert Service]
+  [Data Store]
+  [Dashboard UI]
+}
+Owner --> [Dashboard UI] : HTTPS
+Probe --> [API Gateway] : MQTT/HTTPS (telemetry)
+[Alert Service] --> Owner : SMS/Email (via Gateway)
+boundary "Privacy/Trust" {
+}
+@enduml

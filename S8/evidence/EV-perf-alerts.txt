@@ -1,0 +1,47 @@
+$ k6 run S8/tests/T-PERF-01.js
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: S8/tests/T-PERF-01.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 1m0s max duration (incl. graceful stop):
+              * default: 10 looping VUs for 30s (gracefulStop: 30s)
+
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 518     16.667196/s
+    checks_succeeded...: 100.00% 518 out of 518
+    checks_failed......: 0.00%   0 out of 518
+
+    ✓ status is 200
+    ✓ response time < 300ms
+
+    HTTP
+    http_req_duration..............: avg=86.07ms min=14.92ms med=84.26ms max=183.7ms p(90)=161.41ms p(95)=165.03ms
+      { expected_response:true }...: avg=86.07ms min=14.92ms med=84.26ms max=183.7ms p(90)=161.41ms p(95)=165.03ms
+    http_req_failed................: 0.00%  0 out of 518
+    http_reqs......................: 518    16.667196/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.18s   min=1.14s   med=1.17s   max=1.63s   p(90)=1.18s    p(95)=1.19s
+    iterations.....................: 259    8.333598/s
+    vus............................: 5      min=5        max=10
+    vus_max........................: 10     min=10       max=10
+
+    NETWORK
+    data_received..................: 998 kB 32 kB/s
+    data_sent......................: 34 kB  1.1 kB/s
+
+
+
+                                                                                                                                                                                                                                      
+running (0m31.1s), 00/10 VUs, 259 complete and 0 interrupted iterations                                                                                                                                                               
+default ✓ [======================================] 10 VUs  30s   
