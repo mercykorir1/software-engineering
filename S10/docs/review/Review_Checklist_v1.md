@@ -1,0 +1,8 @@
+- [ ] Function names are clear
+- [ ] Logic separated from printing/logging
+- [ ] Alerts toggle respected
+- [ ] Staleness check correct
+- [ ] Tests cover stale/fresh/disabled
+- [ ] Comments explain purpose of functions
+- [ ] DIFF.md documents changes
+- [ ] CI/tests pass
