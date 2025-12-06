@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": "kiosk-01",
+      "name": "Central Kiosk",
+      "location": "Lobby",
+      "status": "active"
+    },
+    {
+      "id": "kiosk-02",
+      "name": "West Kiosk",
+      "location": "Floor 2",
+      "status": "inactive"
+    }
+  ],
+  "nextCursor": "kiosk-02"
+}

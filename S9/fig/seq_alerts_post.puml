@@ -1,0 +1,17 @@
+@startuml
+title Alerts POST (Idempotent Creation)
+
+actor Client
+participant "API Gateway" as API
+participant "Alerts Service" as Service
+participant "Database" as DB
+
+Client -> API : POST /v1/alerts (body + Idempotency-Key)
+API -> Service : Check Idempotency-Key
+Service -> DB : Lookup key in idempotency table
+DB --> Service : Key exists? No
+Service -> DB : Insert new alert, store key
+DB --> Service : Alert created
+Service --> API : 201 Created (alert object)
+API --> Client : Response
+@enduml

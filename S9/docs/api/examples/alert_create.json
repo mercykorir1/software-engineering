@@ -1,0 +1,6 @@
+{
+  "type": "warning",
+  "message": "Low stock",
+  "kioskId": "kiosk-01",
+  "severity": "high"
+}
