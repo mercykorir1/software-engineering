@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S9 — Modeling & Documentation + API Design</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #1e1e2f;
+      }
+      a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      ul {
+        margin-top: 0.2rem;
+      }
+      li {
+        margin-bottom: 0.4rem;
+      }
+      .screenshot {
+        display: block;
+        max-width: 600px;
+        margin: 1rem 0;
+        border: 1px solid #ddd;
+        padding: 0.2rem;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>S9 — Modeling & Documentation + API Design</h1>
+
+    <h2>Index of Evidence</h2>
+    <ul>
+      <li>
+        API Table:
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/API_Table.md"
+          target="_blank"
+          >docs/api/API_Table.md</a
+        >
+      </li>
+      <li>
+        JSON Examples:
+        <a
+          href="https://github.com/mercykorir1/software-engineering/tree/s9/S9/docs/api/examples"
+          target="_blank"
+          >docs/api/examples/</a
+        >
+        <ul>
+          <li>
+            <a
+              href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/examples/kiosks_list.json"
+              target="_blank"
+              >kiosks_list.json</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/examples/alerts_list.json"
+              target="_blank"
+              >alerts_list.json</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/examples/alert_create.json"
+              target="_blank"
+              >alert_create.json</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/examples/error_422.json"
+              target="_blank"
+              >error_422.json</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/examples/error_409.json"
+              target="_blank"
+              >error_409.json</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        OpenAPI Spec (minimal):
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/docs/api/openapi.yaml"
+          target="_blank"
+          >docs/api/openapi.yaml</a
+        >
+      </li>
+      <li>
+        Postman collection (smoke tests):
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/tests/postman_collection.json"
+          target="_blank"
+          >tests/postman_collection.json</a
+        >
+      </li>
+      <li>
+        PRISM Mock Notes:
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/mock/PRISM_NOTES.md"
+          target="_blank"
+          >mock/PRISM_NOTES.md</a
+        >
+      </li>
+      <li>
+        AI Assistance Note:
+        <a
+          href="https://github.com/mercykorir1/software-engineering/blob/s9/S9/AI_Use_Note.md"
+          target="_blank"
+          >AI_Use_Note.md</a
+        >
+      </li>
+    </ul>
+
+    <h2>Verification Evidence</h2>
+    <ul>
+      <li>
+        Mock server run + Postman smoke tests
+        <ul>
+          <li>Prism mock running on port 4010</li>
+          <li>
+            Endpoints <code>/v1/kiosks</code> and
+            <code>/v1/alerts</code> returning example data
+          </li>
+        </ul>
+      </li>
+      <li>Cursor pagination verified in Alerts GET</li>
+      <li>
+        Idempotent POST verified in Alerts POST with
+        <code>Idempotency-Key</code>
+      </li>
+      <li>
+        OpenAPI lint successful (Redocly) with only one non-blocking warning
+        (<code>localhost</code> server URL)
+      </li>
+      <li>Optional: HTML and bundled JSON generated for API documentation</li>
+    </ul>
+
+    <p>Instructors have read access: Yes</p>
+
+    <h2>ScreenShots</h2>
+    <ul>
+      <li>
+        Mock server running evidence<br />
+        <a
+          href="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image.png"
+          target="_blank"
+        >
+          <img
+            src="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image.png"
+            alt="Prism mock server running"
+            class="screenshot"
+          />
+        </a>
+      </li>
+      <li>
+        Endpoints working evidence (Postman smoke tests)<br />
+        <a
+          href="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-1.png"
+          target="_blank"
+        >
+          <img
+            src="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-1.png"
+            alt="GET /v1/kiosks"
+            class="screenshot"
+          /> </a
+        ><br />
+        <a
+          href="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-2.png"
+          target="_blank"
+        >
+          <img
+            src="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-2.png"
+            alt="GET /v1/alerts"
+            class="screenshot"
+          />
+        </a>
+      </li>
+      <li>
+        OpenAPI HTML doc<br />
+        <a
+          href="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-3.png"
+          target="_blank"
+        >
+          <img
+            src="https://github.com/mercykorir1/software-engineering/raw/s9/S9/image-3.png"
+            alt="OpenAPI HTML doc"
+            class="screenshot"
+          />
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
