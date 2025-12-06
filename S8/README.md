@@ -16,5 +16,3 @@
   S8/evidence/EV-perf-alerts.md
 - Review notes:
   S8/review_notes/TEAM_01.md
-
-Instructors have read access: Yes
