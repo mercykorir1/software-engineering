@@ -14,7 +14,7 @@
 
 - Conflict resolution commit:
 
-  - We completed this test earlier as well, where two people on separate computers resolved a merge conflict together. Unfortunately, we couldn’t find the original merge link, so it was lost. To recreate the scenario, I tried generating a merge conflict manually by editing the README in the cloud and making different changes to the README locally. I attempted to commit both versions, but as shown in the image, this didn’t trigger the conflict as expected.
+  We completed this test earlier as well, where two people on separate computers resolved a merge conflict together. Unfortunately, we couldn’t find the original merge link, so it was lost. To recreate the scenario, I tried generating a merge conflict manually by editing the README in the cloud and making different changes to the README locally. I attempted to commit both versions, but as shown in the image, this didn’t trigger the conflict as expected.
 
   Because of that, we had to pull the remote version first to force the conflict. After pulling, Git displayed the differences, and we chose which changes to keep. Once we resolved the conflict locally, we made a new commit and pushed the updated version back to the repository.
 
