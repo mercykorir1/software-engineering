@@ -10,6 +10,7 @@
 - Green CI run (PR-A):
   - [Link](https://github.com/mercykorir1/software-engineering/commit/153142c585df93f6adc64b7bbf24c0e27750f0ee)
   - ![Green CLI Run image](image-1.png)
+    s
 
 ## Governance Artifacts
 
@@ -23,3 +24,5 @@
 - [LABELS.md](docs/governance/LABELS.md)
 
 Instructors added (read access): yes — course instructors added as collaborators
+
+Artfical merge conflict local
