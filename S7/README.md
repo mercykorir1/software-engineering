@@ -7,9 +7,14 @@
   - [Link](https://github.com/mercykorir1/software-engineering/commit/051ac62d3dc9774a971e936ed3eb6cba84779bd9)
   - ![Tiny changes image](image.png)
 - Conflict resolution commit:
-  - ![Merge conflict 1](image-3.png)
-  - ![Merge conflict fixing](image-5.png)
-  - ![Resolve Image](image-4.png)
+
+  - We completed this test earlier as well, where two people on separate computers resolved a merge conflict together. Unfortunately, we couldn’t find the original merge link, so it was lost. To recreate the scenario, I tried generating a merge conflict manually by editing the README in the cloud and making different changes to the README locally. I attempted to commit both versions, but as shown in the image, this didn’t trigger the conflict as expected.
+
+  Because of that, we had to pull the remote version first to force the conflict. After pulling, Git displayed the differences, and we chose which changes to keep. Once we resolved the conflict locally, we made a new commit and pushed the updated version back to the repository.
+
+- ![Merge conflict 1](image-3.png)
+- ![Merge conflict fixing](image-5.png)
+- ![Resolve Image](image-4.png)
 - Green CI run (PR-A):
   - [Link](https://github.com/mercykorir1/software-engineering/commit/153142c585df93f6adc64b7bbf24c0e27750f0ee)
   - ![Green CLI Run image](image-1.png)
