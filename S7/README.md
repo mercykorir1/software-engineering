@@ -1,14 +1,15 @@
 # S7 Evidence Index
 
-- PR-A (Governance PR): [Link](https://github.com/mercykorir1/software-engineering/pull/1)
-  ![Review Image](image-2.png)
+- PR-A (Governance PR):
+  - [Link](https://github.com/mercykorir1/software-engineering/pull/1)
+  - ![Review Image](image-2.png)
 - PR-B (Tiny feature/docs PR):
   - [Link](https://github.com/mercykorir1/software-engineering/commit/051ac62d3dc9774a971e936ed3eb6cba84779bd9)
   - ![Tiny changes image](image.png)
 - Conflict resolution commit:
 - Green CI run (PR-A):
   - [Link](https://github.com/mercykorir1/software-engineering/commit/153142c585df93f6adc64b7bbf24c0e27750f0ee)
-    - ![Green CLI Run image](image-1.png)
+  - ![Green CLI Run image](image-1.png)
 
 ## Governance Artifacts
 
