@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "conflict_error",
+    "message": "Resource at capacity",
+    "details": { "resource": "alerts" },
+    "traceId": "def456"
+  }
+}

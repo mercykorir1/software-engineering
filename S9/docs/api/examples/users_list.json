@@ -1,0 +1,7 @@
+{
+  "data": [
+    { "id": "user-01", "name": "Alice", "role": "admin" },
+    { "id": "user-02", "name": "Bob", "role": "staff" }
+  ],
+  "nextCursor": "user-02"
+}

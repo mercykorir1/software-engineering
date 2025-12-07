@@ -1,0 +1,20 @@
+@startuml
+title Alerts GET (Cursor Pagination)
+
+actor Client
+participant "API Gateway" as API
+participant "Alerts Service" as Service
+participant "Cache" as Cache
+participant "Database" as DB
+
+Client -> API : GET /v1/alerts?limit=25&cursor=abc
+API -> Cache : Check cursor "abc"
+Cache --> API : Cached data? Yes -> return subset
+Cache --> API : No -> forward request
+API -> Service : Fetch alerts from DB
+Service -> DB : Query alerts after cursor "abc"
+DB --> Service : Result set
+Service --> Cache : Store result with cursor key
+Service --> API : Return data + nextCursor
+API --> Client : 200 OK (alerts list + nextCursor)
+@enduml

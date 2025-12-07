@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Kiosk Alerts Smoke Tests",
+    "_postman_id": "12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Kiosks",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "X-API-Key", "value": "{{API_KEY}}" }],
+        "url": { "raw": "http://localhost:4010/v1/kiosks" }
+      },
+      "response": []
+    },
+    {
+      "name": "List Alerts with Pagination",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "X-API-Key", "value": "{{API_KEY}}" }],
+        "url": { "raw": "http://localhost:4010/v1/alerts?limit=2" }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Alert (Idempotent)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "X-API-Key", "value": "{{API_KEY}}" },
+          { "key": "Idempotency-Key", "value": "test-123" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"type\": \"warning\", \"message\": \"Low stock\", \"kioskId\": \"kiosk-01\", \"severity\": \"high\" }"
+        },
+        "url": { "raw": "http://localhost:4010/v1/alerts" }
+      },
+      "response": []
+    },
+    {
+      "name": "Negative Case 422",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "X-API-Key", "value": "{{API_KEY}}" },
+          { "key": "Idempotency-Key", "value": "test-422" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"type\": \"warning\" }" },
+        "url": { "raw": "http://localhost:4010/v1/alerts" }
+      },
+      "response": []
+    }
+  ]
+}
